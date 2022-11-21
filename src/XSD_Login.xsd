@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<xsd:schema
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+    targetNamespace = "http://www.simple.com"
+    xmlns="http://www.simple.com"
+    elementFormDefault = "qualified">
+
+
+<xsd:element name = "users">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name = "user" type = "userType" maxOccurs = "unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name = "userType">
+    <xsd:sequence>
+        <xsd:element name = "login" type = "xsd:string" maxOccurs = "unbounded"/>
+        <xsd:element name = "password" type = "xsd:string" maxOccurs = "unbounded"/>
+    </xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>
